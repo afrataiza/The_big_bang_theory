@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>The Big Bang Theory</title>
 
     <!--FONTES-->
-    <link rel="" href=""/>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
 
 </head>
 <body>
  
-    <header>
-        <h1>The Big Bang Theory</h1>
-        <img src="/img/The-Big-Bang-Theory-PNG-File.png" alt="personagens">
-        <button></button>
-        <div>
-            <p>IMDb 7,9</p>
-            <img src="/img/pngwing.com.png" alt="estrela">
+    <header class="flex flex-col w-screen bg-[#EAE6E6]">
+        <div class="flex w-full items-center gap-3 px-10">
+            <h1 class="text-6xl text-[#265F7D] font-bold font-[Inter]">The Big Bang Theory</h1>
+            <img class="w-72 h-36" src="/imgs/personagens-header.png" alt="personagens">
+        </div>
+        <div class="bg-[#F83600] flex justify-end items-center h-20 gap-3 px-24">
+            <p class="text-white text-2xl">IMDb <span class="text-5xl">7,9</span></p>
+            <img class="w-6 h-6" src="/imgs/star.png" alt="estrela">
         </div>
     </header>
 
