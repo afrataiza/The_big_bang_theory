@@ -63,19 +63,19 @@
             </div>
         </section>
 
-        <div class="flex flex-col w-screen gap-4 p-6 bg-[#EAE6E6] place-content-center text-[#D6E8EC] md:flex-row md:gap-10">
+        <div id="card-container" class="flex flex-col w-screen gap-4 p-6 bg-[#EAE6E6] place-content-center text-[#D6E8EC] md:flex-row md:gap-10">
             <div class="w-56 bg-[#265F7D] p-2 rounded-xl h-80 ">
-                <img src="./imgs/sheldon.png" alt="">
+                <img src="./imgs/sheldon.png" alt="Foto do Sheldon">
                 <h3 class="font-bold text-center mt-2">Sheldon Cooper</h3>
                 <p class="text-xs text-left px-1 mt-1">É um físico teórico que possui um temperamento arrogante, chegando a pensar que só apareceria alguém mais inteligente que ele após centenas de anos, e que o nome desse teria um asterisco (*) na frente, pois seria um ciborgue.</p>
             </div>
             <div class="w-56 bg-[#265F7D] p-2 rounded-xl h-80">
-                <img src="./imgs/penny.png" alt="">
+                <img src="./imgs/penny.png" alt="Foto do Leonard">
                 <h3 class="font-bold text-center mt-2">Penny Teller</h3>
                 <p class="text-xs text-left px-1 mt-1">Uma atriz aspirante, mas malsucedida então trabalha como garçonete. Ela sempre foi o interesse amoroso de Leonard desde capitulo piloto. E mesmo sendo considerada parte do grupo masculino, ela representa a "loira burra" no inicio da série</p>
             </div>
             <div class="w-56 bg-[#265F7D] p-2 rounded-xl h-80">
-                <img src="./imgs/leonard.png" alt="">
+                <img src="./imgs/leonard.png" alt="Foto da Penny">
                 <h3 class="font-bold text-center mt-2">Leonard Hostetler</h3>
                 <p class="text-xs text-left px-1 mt-1">Ele é um físico experimental do Instituto de Tecnologia da Califórnia que anteriormente morou com Sheldon Cooper no apartamento 4A.Ele parece ser o líder do grupo, com Sheldon comentando como Leonard é o "Kirk" do grupo.</p>
             </div>
@@ -96,12 +96,18 @@
             <form class="flex flex-col bg-[#333336] gap-1 w-[500px] h-[600px] p-6 rounded-xl items-center">
                 <img src="./imgs/logo.png" alt="Logo da série" class="w-52 h-32 mb-6">
                 <label for="name" class="text-[#D6E8EC] w-full">Nome do Personagem</label>
-                <input type="text" id="name" class="bg-transparent rounded-xl border-[#F83600] mb-6 w-full" required>
+                <input type="text" id="name"
+                class="bg-transparent rounded-xl border-[#F83600] mb-6 w-full focus:border-[#265F7D] text-white"
+                required placeholder="Digite o nome do personagem">
                 <label for="image" class="text-[#D6E8EC] w-full">URL da imagem</label>
-                <input type="text" id="image" class="bg-transparent rounded-xl border-[#F83600] mb-6 w-full" required>
+                <input type="text" id="image" class="bg-transparent rounded-xl border-[#F83600] mb-6 w-full focus:border-[#265F7D]" required>
                 <label for="description" class="text-[#D6E8EC] w-full">Descrição</label>
-                <textarea id="description" cols="5" rows="3" class="bg-transparent rounded-xl border-[#F83600] mb-6 w-full" required></textarea>             
-                <button type="submit" id="save-button" class="bg-[#265F7D] h-10 rounded-xl text-[#D6E8EC] w-full">Salvar</button>
+                <textarea id="description" cols="5" rows="3" class="bg-transparent rounded-xl border-[#F83600] mb-6 w-full focus:border-[#265F7D]" required></textarea>
+                <div class="flex gap-3 w-full items-center mb-6">
+                    <input type="checkbox" id="memory" class="appearance-none checked:bg-[#F83600] rounded-sm focus:border-[#265F7D]">
+                    <label for="memory" class="text-[#D6E8EC]">Salvar card neste navegador</label>
+                </div>
+                <button type="button" id="save-button" class="bg-[#265F7D] h-10 rounded-xl text-[#D6E8EC] w-full">Salvar</button>
             </form>
         </div>
     </main>
