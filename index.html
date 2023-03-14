@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>The Big Bang Theory</title>
+
+    <!--CSS-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 
     <!--FONTES-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- ICONES-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
-<body>
+<body class="font-[Inter] bg-[#EAE6E6] min-h-screen overflow-x-hidden">
  
     <header class="flex flex-col w-screen bg-[#EAE6E6]">
         <div class="flex w-full items-center gap-3 px-10">
-            <h1 class="text-6xl text-[#265F7D] font-bold font-[Inter]">The Big Bang Theory</h1>
+            <h1 class="text-6xl text-[#265F7D] font-bold">The Big Bang Theory</h1>
             <img class="w-72 h-36" src="/imgs/personagens-header.png" alt="personagens">
         </div>
         <div class="bg-[#F83600] flex justify-end items-center h-20 gap-3 px-24">
@@ -33,7 +40,7 @@
                 <p>
                     Na sitcom The Big Bang Theory, Leonard Hofstadter (Johnny Galecki) e Sheldon
                     Cooper (Jim Parsons) são dois físicos brilhantes que trabalham no Instituto
-                    e Tecnologia da Califórnia e dividem um apartamento em Pasadena. 
+                    de Tecnologia da Califórnia e dividem um apartamento em Pasadena. 
                     Leonard vem de uma família cheia de prodígios e tem de lidar com a 
                     expectativa opressora de seus parentes. Por outro lado, Sheldon frequentou
                     faculdade desde cedo, é o garoto de ouro do Texas com dois doutorados, 
@@ -47,14 +54,15 @@
                     rapazes, aos poucos Penny se aproxima dos Geeks.
                 </p>
             </div>
-
             <div class="trailer">
                 <h3>Trailer:</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/rCj-Fb1OmXg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/rCj-Fb1OmXg" 
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
             </div>
-
         </section>
+
         <div class="allCards">
             <div class="eachCard">
                 <img src="./imgs/sheldon.png" alt="">
@@ -72,38 +80,64 @@
                 <p>Ele é um físico experimental do Instituto de Tecnologia da Califórnia que anteriormente morou com Sheldon Cooper no apartamento 4A.Ele parece ser o líder do grupo, com Sheldon comentando como Leonard é o "Kirk" do grupo.</p>
             </div>
         </div>
+
+        <button type="button" data-modal-target="defaultModal"
+         data-modal-toggle="defaultModal" 
+         id="add-button"
+         class="bg-[#F83600] w-14 h-14 rounded-full fixed right-3 bottom-80 md:bottom-56"
+         >
+            <span class="material-icons w-full h-full flex justify-center items-center text-3xl text-white">
+                add
+            </span>
+        </button>
+
+        <div id="defaultModal" tabindex="-1" aria-hidden="true"
+        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+            <form class="flex flex-col bg-[#333336] gap-1 w-[500px] h-[600px] p-6 rounded-xl items-center">
+                <img src="./imgs/logo.png" alt="Logo da série" class="w-52 h-32 mb-6">
+                <label for="name" class="text-[#D6E8EC] w-full">Nome do Personagem</label>
+                <input type="text" id="name" class="bg-transparent rounded-xl border-[#F83600] mb-6 w-full" required>
+                <label for="image" class="text-[#D6E8EC] w-full">URL da imagem</label>
+                <input type="text" id="image" class="bg-transparent rounded-xl border-[#F83600] mb-6 w-full" required>
+                <label for="description" class="text-[#D6E8EC] w-full">Descrição</label>
+                <textarea id="description" cols="5" rows="3" class="bg-transparent rounded-xl border-[#F83600] mb-6 w-full" required></textarea>             
+                <button type="submit" id="save-button" class="bg-[#265F7D] h-10 rounded-xl text-[#D6E8EC] w-full">Salvar</button>
+            </form>
+        </div>
     </main>
-    <footer>
+
+    <footer class="flex flex-col w-screen h-full md:h-48 items-center justify-between bg-[#006691] relative">
         <div>
-            <img src="" alt="">
+            <img src="./imgs/penny_cartoon.png" alt="Desenho da Penny" class="w-32 h-28 object-contain absolute left-2 top-4">
+        </div>
+        <h2 class="text-white text-2xl">Desenvolvedores</h2>
+        <div class="flex flex-col justify-center w-full gap-6 md:flex-row md:gap-24">
+            <div class="flex flex-col justify-center items-center">
+                <h3 class="text-white">Afra Taíza Andrade</h3>
+                <div class="flex gap-3 justify-center mt-2">
+                    <a href="https://www.github.com/afrataiza/"> <img src="./imgs/github.png" alt="Logo do github" class="w-6 h-6"></a>
+                    <a href="https://www.linkedin.com/in/afrataiza/"> <img src="./imgs/linkedin.png" alt="Logo do linkedin" class="w-6 h-6"></a>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+                <h3 class="text-white">Helza Aragão</h3>
+                <div class="flex gap-3 justify-center mt-2">
+                    <a href="https://github.com/helzaaragao"> <img src="./imgs/github.png" alt="Logo do github" class="w-6 h-6"></a>
+                    <a href="https://www.linkedin.com/in/helza-arag%C3%A3o-879a36204/"> <img src="./imgs/linkedin.png" alt="Logo do linkedin" class="w-6 h-6"></a>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+                <h3 class="text-white">Sheila dos Santos</h3>
+                <div class="flex gap-3 justify-center mt-2">
+                    <a href="https://github.com/sheilasantosdev"> <img src="./imgs/github.png" alt="Logo do github" class="w-6 h-6"></a>
+                    <a href="https://www.linkedin.com/in/sheila-dos-santos-057992243/"> <img src="./imgs/linkedin.png" alt="Logo do linkedin" class="w-6 h-6"></a>
+                </div>
+            </div>
         </div>
         <div>
-            <h2>Desenvolvedores</h2>
-            <div>
-                <h3>Afra Taíza</h3>
-                <div>
-                    <a href="https://www.linkedin.com/in/afrataiza/"><img src="" alt=""></a>
-                    <a href="https://www.linkedin.com/in/afrataiza/"><img src="" alt=""></a>
-                </div>
-            </div>
-            <div>
-                <h3>Afra Taíza</h3>
-                <div>
-                    <a href="https://www.linkedin.com/in/afrataiza/"><img src="" alt=""></a>
-                    <a href="https://www.linkedin.com/in/afrataiza/"><img src="" alt=""></a>
-                </div>
-            </div>
-            <div>
-                <h3>Afra Taíza</h3>
-                <div>
-                    <a href="https://www.linkedin.com/in/afrataiza/"><img src="" alt=""></a>
-                    <a href="https://www.linkedin.com/in/afrataiza/"><img src="" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <div>
-            <img src="" alt="">
+            <img src="./imgs/leonard_cartoon.png" alt="Desenho do Leonard" class="w-32 h-28 object-contain absolute right-2 bottom-4">
         </div>
     </footer>
+    <script src="./js/script.js"></script>
 </body>
 </html>
