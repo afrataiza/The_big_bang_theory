@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,8 +21,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
+
 <body class="font-[Inter] bg-[#EAE6E6] min-h-screen overflow-x-hidden">
- 
+
     <header class="flex flex-col w-screen bg-[#EAE6E6]">
         <div class="flex w-full items-center gap-3 px-10">
             <h1 class="text-6xl text-[#265F7D] font-bold">The Big Bang Theory</h1>
@@ -33,117 +35,140 @@
         </div>
     </header>
 
-    <main>
-        <section class="overview">
-            <div class="text">
-                <h3>Sinopse:</h3>
-                <p>
+    <main class="min-h-screen">
+        <section class="flex bg-[#265F7D] text-white h-96 px-24 gap-10 items-center mb-10">
+            <div class="">
+                <h3 class="text-1xl font-bold text-white mb-2">Sinopse:</h3>
+                <p class="text-1x1 w-9/12">
                     Na sitcom The Big Bang Theory, Leonard Hofstadter (Johnny Galecki) e Sheldon
                     Cooper (Jim Parsons) são dois físicos brilhantes que trabalham no Instituto
-                    de Tecnologia da Califórnia e dividem um apartamento em Pasadena. 
-                    Leonard vem de uma família cheia de prodígios e tem de lidar com a 
+                    de Tecnologia da Califórnia e dividem um apartamento em Pasadena.
+                    Leonard vem de uma família cheia de prodígios e tem de lidar com a
                     expectativa opressora de seus parentes. Por outro lado, Sheldon frequentou
-                    faculdade desde cedo, é o garoto de ouro do Texas com dois doutorados, 
-                    mestrados e, mesmo assim, tem pouquíssimo traquejo social para se 
-                    relacionar com outros seres humanos. Leonard e Sheldon passam a maior 
+                    faculdade desde cedo, é o garoto de ouro do Texas com dois doutorados,
+                    mestrados e, mesmo assim, tem pouquíssimo traquejo social para se
+                    relacionar com outros seres humanos. Leonard e Sheldon passam a maior
                     parte do tempo com os amigos Howard (Simon Helberg) e Raj (Kunal Nayyar),
-                    dois cientistas que também amam cinema, quadrinhos e videogames. 
-                    A dinâmica do quarteto muda quando Penny (Kaley Cuoco), uma jovem 
-                    atraente e aspirante a atriz, se muda para o apartamento da frente, 
-                    encantando Leonard logo de cara. Apesar de ser muito diferente dos 
+                    dois cientistas que também amam cinema, quadrinhos e videogames.
+                    A dinâmica do quarteto muda quando Penny (Kaley Cuoco), uma jovem
+                    atraente e aspirante a atriz, se muda para o apartamento da frente,
+                    encantando Leonard logo de cara. Apesar de ser muito diferente dos
                     rapazes, aos poucos Penny se aproxima dos Geeks.
                 </p>
             </div>
-            <div class="trailer">
-                <h3>Trailer:</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/rCj-Fb1OmXg" 
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen></iframe>
+            <div class="items-center">
+                <h3 class="text-white text-1xl font-bold mb-2">Trailer:</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/rCj-Fb1OmXg"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
             </div>
         </section>
 
-        <div id="card-container" class="flex flex-col w-screen gap-4 p-6 bg-[#EAE6E6] place-content-center text-[#D6E8EC] md:flex-row md:gap-10">
+        <div id="card-container"
+            class="flex flex-col w-screen gap-6 mb-10 bg-[#EAE6E6] justify-center text-[#D6E8EC] md:flex-row md:flex-wrap md:gap-16"
+        >
             <div class="w-56 bg-[#265F7D] p-2 rounded-xl h-80 ">
                 <img src="./imgs/sheldon.png" alt="Foto do Sheldon">
                 <h3 class="font-bold text-center mt-2">Sheldon Cooper</h3>
-                <p class="text-xs text-left px-1 mt-1">É um físico teórico que possui um temperamento arrogante, chegando a pensar que só apareceria alguém mais inteligente que ele após centenas de anos, e que o nome desse teria um asterisco (*) na frente, pois seria um ciborgue.</p>
+                <p class="text-xs text-left px-1 mt-1">É um físico teórico que possui um temperamento arrogante,
+                    chegando a pensar que só apareceria alguém mais inteligente que ele após centenas de anos, e que o
+                    nome desse teria um asterisco (*) na frente, pois seria um ciborgue.</p>
             </div>
             <div class="w-56 bg-[#265F7D] p-2 rounded-xl h-80">
                 <img src="./imgs/penny.png" alt="Foto do Leonard">
                 <h3 class="font-bold text-center mt-2">Penny Teller</h3>
-                <p class="text-xs text-left px-1 mt-1">Uma atriz aspirante, mas malsucedida então trabalha como garçonete. Ela sempre foi o interesse amoroso de Leonard desde capitulo piloto. E mesmo sendo considerada parte do grupo masculino, ela representa a "loira burra" no inicio da série</p>
+                <p class="text-xs text-left px-1 mt-1">Uma atriz aspirante, mas malsucedida então trabalha como
+                    garçonete. Ela sempre foi o interesse amoroso de Leonard desde capitulo piloto. E mesmo sendo
+                    considerada parte do grupo masculino, ela representa a "loira burra" no inicio da série</p>
             </div>
             <div class="w-56 bg-[#265F7D] p-2 rounded-xl h-80">
                 <img src="./imgs/leonard.png" alt="Foto da Penny">
                 <h3 class="font-bold text-center mt-2">Leonard Hostetler</h3>
-                <p class="text-xs text-left px-1 mt-1">Ele é um físico experimental do Instituto de Tecnologia da Califórnia que anteriormente morou com Sheldon Cooper no apartamento 4A.Ele parece ser o líder do grupo, com Sheldon comentando como Leonard é o "Kirk" do grupo.</p>
+                <p class="text-xs text-left px-1 mt-1">Ele é um físico experimental do Instituto de Tecnologia da
+                    Califórnia que anteriormente morou com Sheldon Cooper no apartamento 4A.Ele parece ser o líder do
+                    grupo, com Sheldon comentando como Leonard é o "Kirk" do grupo.</p>
             </div>
         </div>
 
-        <button type="button" data-modal-target="defaultModal"
-         data-modal-toggle="defaultModal" 
-         id="add-button"
-         class="bg-[#F83600] w-14 h-14 rounded-full fixed right-3 bottom-80 md:bottom-56"
-         >
+        <button type="button" data-modal-target="defaultModal" data-modal-toggle="defaultModal" id="add-button"
+            class="bg-[#F83600] w-14 h-14 rounded-full fixed right-3 bottom-80 md:bottom-56">
             <span class="material-icons w-full h-full flex justify-center items-center text-3xl text-white">
                 add
             </span>
         </button>
 
         <div id="defaultModal" tabindex="-1" aria-hidden="true"
-        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
-            <form class="flex flex-col bg-[#333336] gap-1 w-[500px] h-[600px] p-6 rounded-xl items-center">
+            class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+            <form class="flex flex-col bg-[#333336] gap-1 w-[500px] h-[700px] p-6 rounded-xl items-center">
                 <img src="./imgs/logo.png" alt="Logo da série" class="w-52 h-32 mb-6">
+                <span id="error-message" class="mb-6 text-red-600"></span>
                 <label for="name" class="text-[#D6E8EC] w-full">Nome do Personagem</label>
                 <input type="text" id="name"
-                class="bg-transparent rounded-xl border-[#F83600] mb-6 w-full focus:border-[#265F7D] text-white"
-                required placeholder="Digite o nome do personagem">
+                    class="bg-transparent rounded-xl border-[#F83600] mb-6 w-full focus:border-[#265F7D] text-white"
+                    placeholder="Digite o nome do personagem">
                 <label for="image" class="text-[#D6E8EC] w-full">URL da imagem</label>
-                <input type="text" id="image" class="bg-transparent rounded-xl border-[#F83600] mb-6 w-full focus:border-[#265F7D]" required>
+                <input type="text" id="image"
+                    class="bg-transparent rounded-xl border-[#F83600] mb-6 w-full focus:border-[#265F7D] text-white"
+                    placeholder="Digite a url da imagem do seu personagem">
                 <label for="description" class="text-[#D6E8EC] w-full">Descrição</label>
-                <textarea id="description" cols="5" rows="3" class="bg-transparent rounded-xl border-[#F83600] mb-6 w-full focus:border-[#265F7D]" required></textarea>
+                <textarea id="description" cols="5" rows="3"
+                    class="bg-transparent rounded-xl border-[#F83600] mb-6 w-full focus:border-[#265F7D] p-2 text-white"
+                    placeholder="Digite uma breve descrição sobre seu personagem"></textarea>
                 <div class="flex gap-3 w-full items-center mb-6">
-                    <input type="checkbox" id="memory" class="appearance-none checked:bg-[#F83600] rounded-sm focus:border-[#265F7D]">
-                    <label for="memory" class="text-[#D6E8EC]">Salvar card neste navegador</label>
+                    <input type="checkbox" id="memory"
+                        class="appearance-none checked:bg-[#F83600] rounded-sm focus:border-[#265F7D]">
+                    <label for="memory" class="text-[#D6E8EC]">Salvar card neste navegador
+                        <span class="text-slate-400">(opcional)</span>
+                    </label>
                 </div>
-                <button type="button" id="save-button" class="bg-[#265F7D] h-10 rounded-xl text-[#D6E8EC] w-full">Salvar</button>
+                <button type="button" id="save-button"
+                    class="bg-[#265F7D] h-10 rounded-xl text-[#D6E8EC] w-full">Salvar</button>
             </form>
         </div>
     </main>
 
     <footer class="flex flex-col w-screen h-full md:h-48 items-center justify-between bg-[#006691] relative">
         <div>
-            <img src="./imgs/penny_cartoon.png" alt="Desenho da Penny" class="w-32 h-28 object-contain absolute left-2 top-4">
+            <img src="./imgs/penny_cartoon.png" alt="Desenho da Penny"
+                class="w-32 h-28 object-contain absolute left-2 top-4">
         </div>
         <h2 class="text-white text-2xl">Desenvolvedores</h2>
         <div class="flex flex-col justify-center w-full gap-6 md:flex-row md:gap-24">
             <div class="flex flex-col justify-center items-center">
                 <h3 class="text-white">Afra Taíza Andrade</h3>
                 <div class="flex gap-3 justify-center mt-2">
-                    <a href="https://www.github.com/afrataiza/"> <img src="./imgs/github.png" alt="Logo do github" class="w-6 h-6"></a>
-                    <a href="https://www.linkedin.com/in/afrataiza/"> <img src="./imgs/linkedin.png" alt="Logo do linkedin" class="w-6 h-6"></a>
+                    <a href="https://www.github.com/afrataiza/"> <img src="./imgs/github.png" alt="Logo do github"
+                            class="w-6 h-6"></a>
+                    <a href="https://www.linkedin.com/in/afrataiza/"> <img src="./imgs/linkedin.png"
+                            alt="Logo do linkedin" class="w-6 h-6"></a>
                 </div>
             </div>
             <div class="flex flex-col justify-center items-center">
                 <h3 class="text-white">Helza Aragão</h3>
                 <div class="flex gap-3 justify-center mt-2">
-                    <a href="https://github.com/helzaaragao"> <img src="./imgs/github.png" alt="Logo do github" class="w-6 h-6"></a>
-                    <a href="https://www.linkedin.com/in/helza-arag%C3%A3o-879a36204/"> <img src="./imgs/linkedin.png" alt="Logo do linkedin" class="w-6 h-6"></a>
+                    <a href="https://github.com/helzaaragao"> <img src="./imgs/github.png" alt="Logo do github"
+                            class="w-6 h-6"></a>
+                    <a href="https://www.linkedin.com/in/helza-arag%C3%A3o-879a36204/"> <img src="./imgs/linkedin.png"
+                            alt="Logo do linkedin" class="w-6 h-6"></a>
                 </div>
             </div>
             <div class="flex flex-col justify-center items-center">
                 <h3 class="text-white">Sheila dos Santos</h3>
                 <div class="flex gap-3 justify-center mt-2">
-                    <a href="https://github.com/sheilasantosdev"> <img src="./imgs/github.png" alt="Logo do github" class="w-6 h-6"></a>
-                    <a href="https://www.linkedin.com/in/sheila-dos-santos-057992243/"> <img src="./imgs/linkedin.png" alt="Logo do linkedin" class="w-6 h-6"></a>
+                    <a href="https://github.com/sheilasantosdev"> <img src="./imgs/github.png" alt="Logo do github"
+                            class="w-6 h-6"></a>
+                    <a href="https://www.linkedin.com/in/sheila-dos-santos-057992243/"> <img src="./imgs/linkedin.png"
+                            alt="Logo do linkedin" class="w-6 h-6"></a>
                 </div>
             </div>
         </div>
         <div>
-            <img src="./imgs/leonard_cartoon.png" alt="Desenho do Leonard" class="w-32 h-28 object-contain absolute right-2 bottom-4">
+            <img src="./imgs/leonard_cartoon.png" alt="Desenho do Leonard"
+                class="w-32 h-28 object-contain absolute right-2 bottom-4">
         </div>
     </footer>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
