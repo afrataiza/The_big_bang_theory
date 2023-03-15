@@ -1,6 +1,11 @@
 const saveButton = document.querySelector('#save-button');
 const cardsContainer = document.querySelector('#card-container');
 const errorMessage = document.querySelector('#error-message');
+const nameInput = document.querySelector('#name');
+const imageInput = document.querySelector('#image');
+const descriptionInput = document.querySelector('#description');
+const memoryInput = document.querySelector('#memory');
+
 
 function createCard(character) {
   const div = document.createElement('div');
@@ -25,17 +30,20 @@ function createCard(character) {
   cardsContainer.appendChild(div);
 }
 
-function saveCharacter() {
-  const nameInput = document.querySelector('#name');
-  const imageInput = document.querySelector('#image');
-  const descriptionInput = document.querySelector('#description');
-  const memoryInput = document.querySelector('#memory');
+function resetModal() {
+    errorMessage.innerText = ''
+    nameInput.value = ''
+    imageInput.value = ''
+    descriptionInput.value = ''
+}
 
+function saveCharacter() {
   const character = {
     name: nameInput.value,
     urlImage: imageInput.value,
     description: descriptionInput.value,
   };
+
   const verification =
     nameInput.value.length > 0 &&
     imageInput.value.length > 0 &&
@@ -43,10 +51,10 @@ function saveCharacter() {
 
   if (verification) {
     createCard(character);
-    errorMessage.innerText = ''
     if (memoryInput.checked) {
         localStorage.setItem('character', JSON.stringify(character));
-      }
+    }
+    resetModal();    
   } else {
     errorMessage.innerText = 'Todos os campos são obrigatórios'
   }
@@ -57,5 +65,6 @@ const character = JSON.parse(localStorage.getItem('character'));
 if (character) {
   createCard(character);
 }
+
 
 saveButton.addEventListener('click', saveCharacter);

@@ -35,8 +35,8 @@
         </div>
     </header>
 
-    <main class="min-h-screen">
-        <section class="flex bg-[#265F7D] text-white h-96 px-24 gap-10 items-center mb-10">
+    <main class="min-h-screen flex flex-col justify-between">
+        <section class="flex bg-[#265F7D] text-white h-96 px-24 gap-10 items-center">
             <div class="">
                 <h3 class="text-1xl font-bold text-white mb-2">Sinopse:</h3>
                 <p class="text-1x1 w-9/12">
@@ -90,13 +90,15 @@
                     grupo, com Sheldon comentando como Leonard é o "Kirk" do grupo.</p>
             </div>
         </div>
-
-        <button type="button" data-modal-target="defaultModal" data-modal-toggle="defaultModal" id="add-button"
-            class="bg-[#F83600] w-14 h-14 rounded-full fixed right-3 bottom-80 md:bottom-56">
+        <div class="w-full flex justify-end px-4 mb-10">
+            <button type="button" data-modal-target="defaultModal" data-modal-toggle="defaultModal" id="add-button"
+            class="bg-[#F83600] w-14 h-14 rounded-full">
             <span class="material-icons w-full h-full flex justify-center items-center text-3xl text-white">
                 add
             </span>
         </button>
+        </div>
+        
 
         <div id="defaultModal" tabindex="-1" aria-hidden="true"
             class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
