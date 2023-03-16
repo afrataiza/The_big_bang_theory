@@ -6,6 +6,12 @@ const imageInput = document.querySelector('#image');
 const descriptionInput = document.querySelector('#description');
 const memoryInput = document.querySelector('#memory');
 
+const savedCharacters = JSON.parse(localStorage.getItem('character'));
+if (savedCharacters !== null) {
+  savedCharacters.forEach(character => {
+    createCard(character);
+  });
+}
 
 function createCard(character) {
   const div = document.createElement('div');
@@ -62,16 +68,17 @@ function saveCharacter() {
   };
 
   createCard(character);
+
   if (memoryInput.checked) {
-    localStorage.setItem('character', JSON.stringify(character));
+      if (savedCharacters !== null) {
+        savedCharacters.push(character)
+        localStorage.setItem('character', JSON.stringify(savedCharacters));
+      } else {
+        localStorage.setItem('character', JSON.stringify([character]));
+      }     
   }
   resetModal();
   saveButton.setAttribute('disabled', true); 
-}
-
-const character = JSON.parse(localStorage.getItem('character'));
-if (character) {
-  createCard(character);
 }
 
 nameInput.addEventListener('input', verification);
