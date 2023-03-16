@@ -37,6 +37,23 @@ function resetModal() {
     descriptionInput.value = ''
 }
 
+function verification() {
+  const verifyLength =
+    nameInput.value.length > 3 &&
+    descriptionInput.value.length > 3;
+
+  const isEmpty = 
+    nameInput.value.trim().length > 0 &&
+    imageInput.value.trim().length > 0 &&
+    descriptionInput.value.trim().length > 0;
+
+  if (verifyLength && isEmpty) {
+    saveButton.removeAttribute('disabled');
+  } else {
+    saveButton.setAttribute('disabled', true);
+  }
+}
+
 function saveCharacter() {
   const character = {
     name: nameInput.value,
@@ -44,21 +61,12 @@ function saveCharacter() {
     description: descriptionInput.value,
   };
 
-  const verification =
-    nameInput.value.length > 0 &&
-    imageInput.value.length > 0 &&
-    descriptionInput.value.length > 0;
-
-  if (verification) {
-    createCard(character);
-    if (memoryInput.checked) {
-        localStorage.setItem('character', JSON.stringify(character));
-    }
-    resetModal();    
-  } else {
-    errorMessage.innerText = 'Todos os campos são obrigatórios'
+  createCard(character);
+  if (memoryInput.checked) {
+    localStorage.setItem('character', JSON.stringify(character));
   }
-  
+  resetModal();
+  saveButton.setAttribute('disabled', true); 
 }
 
 const character = JSON.parse(localStorage.getItem('character'));
@@ -66,5 +74,7 @@ if (character) {
   createCard(character);
 }
 
-
+nameInput.addEventListener('input', verification);
+imageInput.addEventListener('input', verification);
+descriptionInput.addEventListener('input', verification);
 saveButton.addEventListener('click', saveCharacter);

@@ -26,7 +26,7 @@
 
     <header class="flex flex-col w-screen bg-[#EAE6E6]">
         <div class="flex sm:w-full items-center sm:gap-3 px-4 sm:px-10">
-            <h1 class=" text-lg sm:text-6xl text-[#265F7D] font-bold">The Big Bang Theory</h1>
+            <h1 class=" text-xl sm:text-6xl text-[#265F7D] font-bold">The Big Bang Theory</h1>
             <img class="w-72 h-36" src="/imgs/personagens-header.png" alt="personagens">
         </div>
         <div class="bg-[#F83600] flex justify-end items-center h-20 gap-3  pr-4 sm:px-24">
@@ -36,10 +36,10 @@
     </header>
 
     <main class="min-h-screen flex flex-col justify-between w-screen">
-        <section class="flex flex-col sm:flex-row bg-[#265F7D] text-white px-4 gap-2 py-2 sm:h-96 sm:px-24 sm:gap-10 items-center">
-            <div class="">
+        <section class="flex flex-col sm:flex-row bg-[#265F7D] text-white px-6 gap-2 py-2 sm:h-96 sm:px-24 sm:gap-10 items-center">
+            <div>
                 <h3 class="text-1xl font-bold text-white mb-2">Sinopse:</h3>
-                <p class="text-xs w-9/12">
+                <p class="text-xs">
                     Na sitcom The Big Bang Theory, Leonard Hofstadter (Johnny Galecki) e Sheldon
                     Cooper (Jim Parsons) são dois físicos brilhantes que trabalham no Instituto
                     de Tecnologia da Califórnia e dividem um apartamento em Pasadena.
@@ -58,7 +58,7 @@
             </div>
             <div class="items-center">
                 <h3 class="text-white text-1xl font-bold mb-2">Trailer:</h3>
-                <iframe class="md:max-xl:flex aspect-video md:aspect-square w-2/3 h-80" src="https://www.youtube.com/embed/rCj-Fb1OmXg"
+                <iframe class="sm:w-[500px] aspect-video sm:aspect-square w-4/5 h-80" src="https://www.youtube.com/embed/rCj-Fb1OmXg"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
@@ -66,7 +66,7 @@
         </section>
 
         <div id="card-container"
-            class="flex flex-col w-screen gap-6 mt-8 mb-5 bg-[#EAE6E6] justify-center items-center text-[#D6E8EC] md:flex-row md:flex-wrap md:gap-16 ">
+            class="flex flex-col w-screen gap-6 mt-8 mb-5 bg-[#EAE6E6] justify-center items-center text-[#D6E8EC] sm:flex-row sm:flex-wrap sm:gap-16 ">
             <div class="w-56 bg-[#265F7D] p-2 rounded-xl h-80 ">
                 <img src="./imgs/sheldon.png" alt="Foto do Sheldon">
                 <h3 class="font-bold text-center mt-2">Sheldon Cooper</h3>
@@ -100,12 +100,12 @@
         
 
         <div id="defaultModal" tabindex="-1" aria-hidden="true"
-            class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] w-screen md:h-full">
+            class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto sm:inset-0 h-[calc(100%-1rem)] w-screen sm:h-full">
             <form class="flex flex-col bg-[#333336] gap-1 w-[500px] h-[700px] p-6 rounded-xl items-center">
                 <img src="./imgs/logo.png" alt="Logo da série" class="w-52 h-32 mb-6">
                 <span id="error-message" class="mb-6 text-red-600"></span>
                 <label for="name" class="text-[#D6E8EC] w-full">Nome do Personagem</label>
-                <input type="text" id="name"
+                <input type="text" id="name" 
                     class="bg-transparent rounded-xl border-[#F83600] mb-6 w-full focus:border-[#265F7D] text-white"
                     placeholder="Digite o nome do personagem">
                 <label for="image" class="text-[#D6E8EC] w-full">URL da imagem</label>
@@ -117,25 +117,25 @@
                     class="bg-transparent rounded-xl border-[#F83600] mb-6 w-full focus:border-[#265F7D] p-2 text-white"
                     placeholder="Digite uma breve descrição sobre seu personagem"></textarea>
                 <div class="flex gap-3 w-full items-center mb-6">
-                    <input type="checkbox" id="memory"
+                    <input type="checkbox" id="memory" on
                         class="appearance-none checked:bg-[#F83600] rounded-sm focus:border-[#265F7D]">
                     <label for="memory" class="text-[#D6E8EC]">Salvar card neste navegador
                         <span class="text-slate-400">(opcional)</span>
                     </label>
                 </div>
                 <button type="button" id="save-button"
-                    class="bg-[#265F7D] h-10 rounded-xl text-[#D6E8EC] w-full">Salvar</button>
+                    class="bg-[#265F7D] h-10 rounded-xl text-[#D6E8EC] w-full disabled:opacity-75 enabled:active:scale-90" disabled>Salvar</button>
             </form>
         </div>
     </main>
 
-    <footer class="flex flex-col w-screen h-full md:h-48 items-center justify-between bg-[#006691] relative py-2">
-        <div>
+    <footer class="flex flex-col w-screen h-full sm:h-48 items-center justify-between bg-[#006691] relative py-2">
+        <div class="mr-2">
             <img src="./imgs/penny_cartoon.png" alt="Desenho da Penny"
                 class="w-32 h-28 object-contain absolute left-2 top-4">
         </div>
         <h2 class="text-white text-2xl">Desenvolvedores</h2>
-        <div class="flex flex-col justify-center w-full gap-6 md:flex-row md:gap-24">
+        <div class="flex flex-col justify-center w-full gap-6 sm:flex-row sm:gap-24">
             <div class="flex flex-col justify-center items-center">
                 <h3 class="text-white">Afra Taíza Andrade</h3>
                 <div class="flex gap-3 justify-center mt-2">
